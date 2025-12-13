@@ -13,6 +13,7 @@ const Index = () => {
         style={{ backgroundImage: `url(${heroBg})`, backgroundPosition: '70% center' }}
       />
       <div className="fixed inset-0 bg-black/50" />
+      <div className="fixed inset-0 bg-gradient-to-t from-black to-transparent" />
       
       {/* Content */}
       <div className="relative z-10">
