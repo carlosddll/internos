@@ -97,9 +97,9 @@ const ProgramTimeline = () => {
         backgroundImage: `repeating-linear-gradient(
           45deg,
           transparent,
-          transparent 10px,
-          rgba(255,255,255,0.02) 10px,
-          rgba(255,255,255,0.02) 20px
+          transparent 8px,
+          rgba(255,255,255,0.03) 8px,
+          rgba(255,255,255,0.03) 9px
         )`
       }}
     >
