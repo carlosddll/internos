@@ -32,10 +32,10 @@ const Hero = () => {
           delay: 0.2,
           duration: 0.6
         }}>
-            <h1 className="sm:text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight font-normal text-2xl font-serif">
+            <h1 className="sm:text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight font-normal text-2xl font-display">
               Ceremonia de
               <br />
-              <span className="font-bold text-secondary text-2xl font-serif">Graduación de Internado</span>
+              <span className="font-bold text-secondary text-2xl font-display">Graduación de Internado</span>
             </h1>
           </motion.div>
         </div>
