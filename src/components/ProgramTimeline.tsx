@@ -18,6 +18,7 @@ interface ProgramItem {
   speaker: string;
   description: string;
   highlight: boolean;
+  time: string;
 }
 
 const programItems: ProgramItem[] = [
@@ -27,6 +28,7 @@ const programItems: ProgramItem[] = [
     speaker: "Dr. Ladd",
     description: "Presentación y bienvenida a la nueva generación de internos",
     highlight: false,
+    time: "9:00",
   },
   {
     icon: Stethoscope,
@@ -34,6 +36,7 @@ const programItems: ProgramItem[] = [
     speaker: "",
     description: "Ceremonia de entrega oficial de bata y credenciales",
     highlight: true,
+    time: "9:15",
   },
   {
     icon: PartyPopper,
@@ -41,6 +44,7 @@ const programItems: ProgramItem[] = [
     speaker: "Dr. Sam",
     description: "Palabras de despedida para los internos salientes",
     highlight: false,
+    time: "9:30",
   },
   {
     icon: Video,
@@ -48,6 +52,7 @@ const programItems: ProgramItem[] = [
     speaker: "Internos 2025",
     description: "Un homenaje especial preparado por los internos",
     highlight: true,
+    time: "9:45",
   },
   {
     icon: Award,
@@ -55,6 +60,7 @@ const programItems: ProgramItem[] = [
     speaker: "Dr. Ladd",
     description: "Reconocimiento a José Jonah Rondón González",
     highlight: true,
+    time: "10:00",
   },
   {
     icon: MessageCircle,
@@ -62,6 +68,7 @@ const programItems: ProgramItem[] = [
     speaker: "Valeria, Rodrigo, Samir y Laura",
     description: "Experiencias y vivencias compartidas",
     highlight: false,
+    time: "10:15",
   },
   {
     icon: PenTool,
@@ -69,6 +76,7 @@ const programItems: ProgramItem[] = [
     speaker: "Jonnah",
     description: "Entrega de reconocimiento especial",
     highlight: false,
+    time: "10:30",
   },
   {
     icon: Rocket,
@@ -76,6 +84,7 @@ const programItems: ProgramItem[] = [
     speaker: "Dr. Mendoza",
     description: "Visión del futuro y línea de tiempo de la clínica",
     highlight: true,
+    time: "10:45",
   },
 ];
 
@@ -119,6 +128,14 @@ const ProgramTimeline = () => {
                 }`}
               >
                 <div className="flex items-start gap-3 sm:gap-4">
+                  {/* Time */}
+                  <div className={`flex-shrink-0 w-12 sm:w-14 text-center ${
+                    item.highlight ? 'text-foreground' : 'text-secondary'
+                  }`}>
+                    <span className="font-display text-sm sm:text-base font-bold">{item.time}</span>
+                    <span className="block text-[10px] sm:text-xs opacity-60">a.m.</span>
+                  </div>
+
                   {/* Icon */}
                   <div className={`flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center ${
                     item.highlight 
