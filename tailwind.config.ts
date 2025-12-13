@@ -68,8 +68,8 @@ export default {
         },
       },
       fontFamily: {
-        display: ['Playfair Display', 'serif'],
-        body: ['Inter', 'sans-serif'],
+        display: ['EB Garamond', 'serif'],
+        body: ['EB Garamond', 'serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
