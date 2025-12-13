@@ -60,8 +60,8 @@
     --shadow-elevated: 0 12px 40px -12px hsl(185 60% 25% / 0.15);
 
     /* Typography */
-    --font-display: 'Playfair Display', serif;
-    --font-body: 'Inter', sans-serif;
+    --font-display: 'Montserrat', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
 
     /* Sidebar (keeping defaults) */
     --sidebar-background: 0 0% 98%;
