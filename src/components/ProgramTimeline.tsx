@@ -8,6 +8,7 @@ import {
   Rocket, 
   PartyPopper,
   Stethoscope,
+  CalendarDays,
   LucideIcon
 } from "lucide-react";
 
@@ -89,7 +90,8 @@ const ProgramTimeline = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-8 sm:mb-12"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-foreground text-xs sm:text-sm font-semibold mb-3">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary text-foreground text-xs sm:text-sm font-semibold mb-3">
+            <CalendarDays className="w-3 h-3 sm:w-4 sm:h-4" />
             Agenda del Evento
           </span>
           <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold text-primary-foreground mb-3">
