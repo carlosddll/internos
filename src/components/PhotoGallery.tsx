@@ -42,7 +42,6 @@ const PhotoGallery = () => {
 
     setIsUploading(true);
 
-    // Simulate upload for each file
     Array.from(files).forEach((file, index) => {
       const reader = new FileReader();
       reader.onload = (e) => {
@@ -67,14 +66,13 @@ const PhotoGallery = () => {
       reader.readAsDataURL(file);
     });
 
-    // Reset input
     if (fileInputRef.current) {
       fileInputRef.current.value = "";
     }
   };
 
   return (
-    <section id="galeria" className="py-24 bg-background">
+    <section id="galeria" className="py-16 md:py-24 bg-secondary">
       <div className="container px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -83,13 +81,13 @@ const PhotoGallery = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-secondary/20 text-secondary text-sm font-medium mb-4">
+          <span className="inline-block px-5 py-2 rounded-full bg-foreground/10 text-foreground text-sm font-semibold mb-4">
             Momentos Especiales
           </span>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
             Galería de Fotos
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+          <p className="text-foreground/70 max-w-2xl mx-auto mb-8 font-body">
             Comparte tus fotos del evento y revive los mejores momentos junto a todos
           </p>
 
@@ -107,7 +105,7 @@ const PhotoGallery = () => {
             <Button
               onClick={() => fileInputRef.current?.click()}
               disabled={isUploading}
-              className="gap-2 bg-gradient-gold text-primary-foreground hover:opacity-90 shadow-gold px-6 py-6 text-base"
+              className="gap-2 bg-foreground text-primary-foreground hover:bg-foreground/90 px-6 py-6 text-base rounded-full"
             >
               {isUploading ? (
                 <>
@@ -121,7 +119,7 @@ const PhotoGallery = () => {
                 </>
               )}
             </Button>
-            <div className="flex items-center gap-2 text-muted-foreground text-sm">
+            <div className="flex items-center gap-2 text-foreground/60 text-sm">
               <Camera className="w-4 h-4" />
               <span>{photos.length} fotos compartidas</span>
             </div>
@@ -138,7 +136,7 @@ const PhotoGallery = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                className="group relative aspect-square rounded-2xl overflow-hidden bg-muted cursor-pointer"
+                className="group relative aspect-square rounded-2xl overflow-hidden bg-foreground/10 cursor-pointer shadow-lg"
                 onClick={() => setSelectedPhoto(photo)}
               >
                 <img
@@ -147,12 +145,12 @@ const PhotoGallery = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 p-3 text-primary-foreground translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                   <p className="text-sm font-medium">{photo.uploadedBy}</p>
                 </div>
                 <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-10 h-10 rounded-full bg-card/90 backdrop-blur-sm flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-secondary/90 backdrop-blur-sm flex items-center justify-center">
                     <ZoomIn className="w-5 h-5 text-foreground" />
                   </div>
                 </div>
@@ -166,7 +164,7 @@ const PhotoGallery = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="aspect-square rounded-2xl border-2 border-dashed border-border flex flex-col items-center justify-center gap-2 text-muted-foreground cursor-pointer hover:border-secondary hover:text-secondary transition-colors"
+              className="aspect-square rounded-2xl border-2 border-dashed border-foreground/20 flex flex-col items-center justify-center gap-2 text-foreground/50 cursor-pointer hover:border-foreground/40 hover:text-foreground/70 transition-colors"
               onClick={() => fileInputRef.current?.click()}
             >
               <ImageIcon className="w-8 h-8" />
@@ -182,7 +180,7 @@ const PhotoGallery = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-foreground/90 backdrop-blur-sm"
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-foreground/95 backdrop-blur-sm"
               onClick={() => setSelectedPhoto(null)}
             >
               <motion.div
@@ -199,7 +197,7 @@ const PhotoGallery = () => {
                 />
                 <button
                   onClick={() => setSelectedPhoto(null)}
-                  className="absolute top-4 right-4 w-10 h-10 rounded-full bg-card/90 backdrop-blur-sm flex items-center justify-center text-foreground hover:bg-card transition-colors"
+                  className="absolute top-4 right-4 w-10 h-10 rounded-full bg-secondary/90 backdrop-blur-sm flex items-center justify-center text-foreground hover:bg-secondary transition-colors"
                 >
                   <X className="w-5 h-5" />
                 </button>
