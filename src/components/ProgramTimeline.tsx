@@ -26,7 +26,7 @@ const programItems: ProgramItem[] = [
     icon: Users,
     title: "Bienvenida Nuevos Internos 2026",
     speaker: "Dr. Ladd",
-    description: "Presentación y bienvenida a la nueva generación de internos",
+    description: "Presentación de nombres y foto de la nueva generación de internos",
     highlight: false,
     time: "9:00",
   },
@@ -35,7 +35,7 @@ const programItems: ProgramItem[] = [
     title: "Recepción de Bata y Fotocheck",
     speaker: "",
     description: "Ceremonia de entrega oficial de bata y credenciales",
-    highlight: true,
+    highlight: false,
     time: "9:15",
   },
   {
@@ -48,10 +48,10 @@ const programItems: ProgramItem[] = [
   },
   {
     icon: Video,
-    title: "Video Despedida",
+    title: "Video Despedida Internos",
     speaker: "Internos 2025",
-    description: "Un homenaje especial preparado por los internos",
-    highlight: true,
+    description: "Tirándole flores a Ladd",
+    highlight: false,
     time: "9:45",
   },
   {
@@ -59,7 +59,7 @@ const programItems: ProgramItem[] = [
     title: "Premiación Especial",
     speaker: "Dr. Ladd",
     description: "Reconocimiento a José Jonah Rondón González",
-    highlight: true,
+    highlight: false,
     time: "10:00",
   },
   {
@@ -74,7 +74,7 @@ const programItems: ProgramItem[] = [
     icon: PenTool,
     title: "Premiación y Palabras",
     speaker: "Jonnah",
-    description: "Entrega de reconocimiento especial",
+    description: "Entrega del lapicero especial",
     highlight: false,
     time: "10:30",
   },
@@ -83,7 +83,7 @@ const programItems: ProgramItem[] = [
     title: "Expansión y Sueño Detecta",
     speaker: "Dr. Mendoza",
     description: "Visión del futuro y línea de tiempo de la clínica",
-    highlight: true,
+    highlight: false,
     time: "10:45",
   },
 ];
