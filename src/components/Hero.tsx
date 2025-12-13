@@ -8,20 +8,21 @@ const Hero = () => {
       {/* Background image area */}
       <div className="relative flex-1 min-h-[45vh] flex items-end">
 
+        {/* Logo centered at top */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="absolute top-6 left-0 right-0 flex justify-center z-20"
+        >
+          <img 
+            src={logoDetecta} 
+            alt="Clínica Detecta" 
+            className="h-16 sm:h-20 md:h-24 w-auto brightness-0 invert"
+          />
+        </motion.div>
+
         <div className="container relative z-10 px-5 pb-6">
-          {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-6"
-          >
-            <img 
-              src={logoDetecta} 
-              alt="Clínica Detecta" 
-              className="h-16 sm:h-20 md:h-24 w-auto"
-            />
-          </motion.div>
 
           {/* Main title */}
           <motion.div
