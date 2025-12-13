@@ -9,8 +9,8 @@ const Index = () => {
     <main className="min-h-screen relative">
       {/* Fixed background image with dark overlay */}
       <div 
-        className="fixed inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        className="fixed inset-0 bg-cover bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBg})`, backgroundPosition: '70% center' }}
       />
       <div className="fixed inset-0 bg-foreground/80" />
       
