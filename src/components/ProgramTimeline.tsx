@@ -90,7 +90,19 @@ const programItems: ProgramItem[] = [
 
 const ProgramTimeline = () => {
   return (
-    <section id="programa" className="py-10 sm:py-16 md:py-24 bg-foreground">
+    <section 
+      id="programa" 
+      className="py-10 sm:py-16 md:py-24 bg-foreground relative"
+      style={{
+        backgroundImage: `repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 10px,
+          rgba(255,255,255,0.02) 10px,
+          rgba(255,255,255,0.02) 20px
+        )`
+      }}
+    >
       <div className="container px-5 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
