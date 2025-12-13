@@ -94,13 +94,8 @@ const ProgramTimeline = () => {
       id="programa" 
       className="py-10 sm:py-16 md:py-24 bg-foreground relative"
       style={{
-        backgroundImage: `repeating-linear-gradient(
-          45deg,
-          transparent,
-          transparent 8px,
-          rgba(255,255,255,0.03) 8px,
-          rgba(255,255,255,0.03) 9px
-        )`
+        backgroundImage: `radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px)`,
+        backgroundSize: '20px 20px'
       }}
     >
       <div className="container px-5 sm:px-6">
