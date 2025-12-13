@@ -21,17 +21,17 @@
     --primary: 185 60% 25%;
     --primary-foreground: 40 33% 98%;
 
-    /* Warm gold - celebration */
-    --secondary: 38 70% 55%;
-    --secondary-foreground: 210 40% 15%;
+    /* Lime green - celebration */
+    --secondary: 68 72% 60%;
+    --secondary-foreground: 0 0% 0%;
 
     /* Soft sage muted */
     --muted: 180 15% 92%;
     --muted-foreground: 210 20% 45%;
 
-    /* Gold accent */
-    --accent: 38 80% 50%;
-    --accent-foreground: 210 40% 15%;
+    /* Lime accent */
+    --accent: 68 72% 60%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 40 33% 98%;
@@ -43,20 +43,20 @@
     --radius: 0.75rem;
 
     /* Custom tokens */
-    --gold: 38 75% 55%;
-    --gold-light: 40 70% 85%;
+    --gold: 68 72% 60%;
+    --gold-light: 68 60% 85%;
     --teal-dark: 185 65% 18%;
     --teal-light: 180 40% 95%;
     --cream: 40 33% 96%;
 
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(185 60% 25%) 0%, hsl(185 65% 18%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(38 75% 55%) 0%, hsl(32 80% 45%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(68 72% 60%) 0%, hsl(68 65% 50%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(40 25% 99%) 0%, hsl(40 20% 97%) 100%);
 
     /* Shadows */
     --shadow-soft: 0 4px 20px -4px hsl(185 60% 25% / 0.1);
-    --shadow-gold: 0 4px 20px -4px hsl(38 75% 55% / 0.3);
+    --shadow-gold: 0 4px 20px -4px hsl(68 72% 60% / 0.3);
     --shadow-elevated: 0 12px 40px -12px hsl(185 60% 25% / 0.15);
 
     /* Typography */
