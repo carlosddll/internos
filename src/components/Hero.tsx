@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex flex-col bg-foreground overflow-hidden">
       {/* Background image area */}
-      <div className="relative flex-1 min-h-[50vh] md:min-h-[55vh] flex items-end">
+      <div className="relative flex-1 min-h-[45vh] flex items-end">
         {/* Background gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-foreground/20 via-foreground/40 to-foreground" />
         
@@ -18,18 +18,18 @@ const Hero = () => {
           }}
         />
 
-        <div className="container relative z-10 px-6 pb-8">
+        <div className="container relative z-10 px-5 pb-6">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-8"
+            className="mb-6"
           >
             <img 
               src={logoDetecta} 
               alt="Clínica Detecta" 
-              className="h-20 md:h-24 w-auto"
+              className="h-16 sm:h-20 md:h-24 w-auto"
             />
           </motion.div>
 
@@ -39,7 +39,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight">
               Ceremonia de
               <br />
               <span className="font-bold text-secondary">Despedida de Internado</span>
@@ -53,44 +53,44 @@ const Hero = () => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.6 }}
-        className="relative z-10 bg-secondary rounded-t-[2.5rem] px-6 py-8 md:py-10"
+        className="relative z-10 bg-secondary rounded-t-[2rem] px-5 py-6 sm:px-6 sm:py-8"
       >
-        <div className="container">
+        <div className="container max-w-lg mx-auto">
           {/* Tabs */}
-          <div className="flex items-center gap-3 mb-6">
-            <div className="flex items-center gap-2 px-4 py-2 bg-foreground/10 rounded-full">
-              <div className="w-1 h-4 bg-foreground rounded-full" />
-              <span className="text-foreground font-medium text-sm">Invitación personal</span>
+          <div className="flex flex-wrap items-center gap-2 mb-5">
+            <div className="flex items-center gap-2 px-3 py-1.5 bg-foreground/10 rounded-full">
+              <div className="w-0.5 h-3 bg-foreground rounded-full" />
+              <span className="text-foreground font-medium text-xs sm:text-sm">Invitación personal</span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-secondary-foreground/10 rounded-full">
-              <span className="text-foreground/70 text-sm">+ Invitado</span>
+            <div className="flex items-center gap-2 px-3 py-1.5 bg-secondary-foreground/10 rounded-full">
+              <span className="text-foreground/70 text-xs sm:text-sm">+ Invitado</span>
             </div>
           </div>
 
           {/* Description */}
-          <p className="text-foreground/80 text-lg mb-6 font-body">
+          <p className="text-foreground/80 text-base sm:text-lg mb-5 font-body leading-relaxed">
             Bienvenida oficial y despedida de los internos de medicina
           </p>
 
           {/* Date pills */}
-          <div className="flex flex-wrap gap-3 mb-8">
-            <div className="flex items-center gap-2 px-5 py-3 bg-secondary-foreground/10 rounded-full border border-foreground/20">
+          <div className="flex flex-wrap gap-2 sm:gap-3 mb-6">
+            <div className="flex items-center gap-2 px-4 py-2.5 bg-secondary-foreground/10 rounded-full border border-foreground/20">
               <Calendar className="w-4 h-4 text-foreground/70" />
-              <span className="text-foreground font-semibold">16 De Dic.</span>
+              <span className="text-foreground font-semibold text-sm">16 De Dic.</span>
             </div>
-            <div className="flex items-center justify-center px-5 py-3 bg-secondary-foreground/10 rounded-full border border-foreground/20">
-              <span className="text-foreground font-semibold">2025</span>
+            <div className="flex items-center justify-center px-4 py-2.5 bg-secondary-foreground/10 rounded-full border border-foreground/20">
+              <span className="text-foreground font-semibold text-sm">2025</span>
             </div>
-            <div className="flex items-center gap-2 px-5 py-3 bg-secondary-foreground/10 rounded-full border border-foreground/20">
+            <div className="flex items-center gap-2 px-4 py-2.5 bg-secondary-foreground/10 rounded-full border border-foreground/20">
               <Clock className="w-4 h-4 text-foreground/70" />
-              <span className="text-foreground font-semibold">9:00 a.m.</span>
+              <span className="text-foreground font-semibold text-sm">9:00 a.m.</span>
             </div>
           </div>
 
           {/* Location */}
-          <div className="flex items-center gap-3 text-foreground/80">
-            <MapPin className="w-5 h-5" />
-            <span className="font-medium">Clínica Detecta</span>
+          <div className="flex items-center gap-3 text-foreground/80 mb-6">
+            <MapPin className="w-5 h-5 flex-shrink-0" />
+            <span className="font-medium text-sm sm:text-base">Clínica Detecta</span>
           </div>
 
           {/* Scroll indicator */}
@@ -98,14 +98,14 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.6 }}
-            className="flex justify-center mt-8"
+            className="flex justify-center"
           >
             <motion.div
-              animate={{ y: [0, 8, 0] }}
+              animate={{ y: [0, 6, 0] }}
               transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-              className="w-8 h-12 rounded-full border-2 border-foreground/30 flex items-start justify-center p-2"
+              className="w-6 h-10 rounded-full border-2 border-foreground/30 flex items-start justify-center p-1.5"
             >
-              <div className="w-1.5 h-3 rounded-full bg-foreground/50" />
+              <div className="w-1 h-2 rounded-full bg-foreground/50" />
             </motion.div>
           </motion.div>
         </div>

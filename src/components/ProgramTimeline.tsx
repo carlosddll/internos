@@ -80,27 +80,27 @@ const programItems: ProgramItem[] = [
 
 const ProgramTimeline = () => {
   return (
-    <section id="programa" className="py-16 md:py-24 bg-foreground">
-      <div className="container px-6">
+    <section id="programa" className="py-10 sm:py-16 md:py-24 bg-foreground">
+      <div className="container px-5 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
         >
-          <span className="inline-block px-5 py-2 rounded-full bg-secondary text-foreground text-sm font-semibold mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-foreground text-xs sm:text-sm font-semibold mb-3">
             Agenda del Evento
           </span>
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-primary-foreground mb-4">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold text-primary-foreground mb-3">
             Programa
           </h2>
-          <p className="text-primary-foreground/60 max-w-2xl mx-auto font-body">
+          <p className="text-primary-foreground/60 text-sm sm:text-base max-w-2xl mx-auto font-body">
             Un recorrido por los momentos más importantes de nuestra ceremonia
           </p>
         </motion.div>
 
-        <div className="max-w-3xl mx-auto space-y-4">
+        <div className="max-w-lg sm:max-w-2xl md:max-w-3xl mx-auto space-y-3 sm:space-y-4">
           {programItems.map((item, index) => {
             const IconComponent = item.icon;
             return (
@@ -109,35 +109,35 @@ const ProgramTimeline = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.08 }}
-                className={`relative rounded-2xl p-5 md:p-6 transition-all duration-300 ${
+                transition={{ duration: 0.4, delay: index * 0.06 }}
+                className={`relative rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 transition-all duration-300 ${
                   item.highlight 
                     ? 'bg-secondary' 
                     : 'bg-primary-foreground/5 hover:bg-primary-foreground/10'
                 }`}
               >
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-3 sm:gap-4">
                   {/* Icon */}
-                  <div className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center ${
+                  <div className={`flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center ${
                     item.highlight 
                       ? 'bg-foreground/10' 
                       : 'bg-secondary/20'
                   }`}>
-                    <IconComponent className={`w-5 h-5 ${
+                    <IconComponent className={`w-4 h-4 sm:w-5 sm:h-5 ${
                       item.highlight ? 'text-foreground' : 'text-secondary'
                     }`} />
                   </div>
 
                   {/* Content */}
                   <div className="flex-1 min-w-0">
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-1">
-                      <h3 className={`font-display text-lg font-semibold ${
+                    <div className="flex flex-col gap-1.5 mb-1">
+                      <h3 className={`font-display text-base sm:text-lg font-semibold leading-tight ${
                         item.highlight ? 'text-foreground' : 'text-primary-foreground'
                       }`}>
                         {item.title}
                       </h3>
                       {item.speaker && (
-                        <span className={`text-sm font-medium px-3 py-1 rounded-full w-fit ${
+                        <span className={`text-xs font-medium px-2.5 py-0.5 rounded-full w-fit ${
                           item.highlight 
                             ? 'bg-foreground/10 text-foreground/80' 
                             : 'bg-secondary/20 text-secondary'
@@ -146,7 +146,7 @@ const ProgramTimeline = () => {
                         </span>
                       )}
                     </div>
-                    <p className={`text-sm ${
+                    <p className={`text-xs sm:text-sm leading-relaxed ${
                       item.highlight ? 'text-foreground/70' : 'text-primary-foreground/50'
                     }`}>
                       {item.description}
@@ -162,14 +162,14 @@ const ProgramTimeline = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="rounded-2xl p-6 bg-gradient-to-r from-secondary via-secondary to-gold text-center"
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="rounded-xl sm:rounded-2xl p-5 sm:p-6 bg-gradient-to-r from-secondary via-secondary to-gold text-center"
           >
-            <PartyPopper className="w-8 h-8 text-foreground mx-auto mb-2" />
-            <h3 className="font-display text-xl font-bold text-foreground">
+            <PartyPopper className="w-6 h-6 sm:w-8 sm:h-8 text-foreground mx-auto mb-2" />
+            <h3 className="font-display text-lg sm:text-xl font-bold text-foreground">
               ¡Fin del Evento!
             </h3>
-            <p className="text-foreground/70 text-sm">
+            <p className="text-foreground/70 text-xs sm:text-sm">
               Celebremos juntos este momento especial
             </p>
           </motion.div>
