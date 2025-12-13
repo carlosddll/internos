@@ -68,8 +68,8 @@ export default {
         },
       },
       fontFamily: {
-        display: ['EB Garamond', 'serif'],
-        body: ['EB Garamond', 'serif'],
+        display: ['Montserrat', 'sans-serif'],
+        body: ['Montserrat', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
