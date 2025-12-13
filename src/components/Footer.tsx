@@ -1,4 +1,5 @@
 import { Heart } from "lucide-react";
+import logoDetecta from "@/assets/logo-detecta.png";
 
 const Footer = () => {
   return (
@@ -6,7 +7,7 @@ const Footer = () => {
       <div className="container px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <span className="font-display text-lg font-semibold">Clínica Detecta</span>
+            <img src={logoDetecta} alt="Clínica Detecta" className="h-12 w-auto brightness-0 invert" />
           </div>
           
           <p className="flex items-center gap-2 text-sm text-primary-foreground/80">

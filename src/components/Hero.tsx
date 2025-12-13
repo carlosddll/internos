@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Calendar, MapPin } from "lucide-react";
+import logoDetecta from "@/assets/logo-detecta.png";
 
 const Hero = () => {
   return (
@@ -26,15 +27,18 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-4xl mx-auto"
         >
-          {/* Badge */}
+          {/* Logo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/20 border border-secondary/30 text-secondary mb-8"
+            className="mb-8"
           >
-            <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-            <span className="text-sm font-medium">Clínica Detecta</span>
+            <img 
+              src={logoDetecta} 
+              alt="Clínica Detecta" 
+              className="h-24 md:h-32 w-auto mx-auto"
+            />
           </motion.div>
 
           {/* Main title */}
