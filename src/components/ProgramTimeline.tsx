@@ -7,10 +7,19 @@ import {
   PenTool, 
   Rocket, 
   PartyPopper,
-  Stethoscope
+  Stethoscope,
+  LucideIcon
 } from "lucide-react";
 
-const programItems = [
+interface ProgramItem {
+  icon: LucideIcon;
+  title: string;
+  speaker: string;
+  description: string;
+  highlight: boolean;
+}
+
+const programItems: ProgramItem[] = [
   {
     icon: Users,
     title: "Bienvenida Nuevos Internos 2026",
@@ -71,98 +80,98 @@ const programItems = [
 
 const ProgramTimeline = () => {
   return (
-    <section id="programa" className="py-24 bg-cream">
+    <section id="programa" className="py-16 md:py-24 bg-foreground">
       <div className="container px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+          <span className="inline-block px-5 py-2 rounded-full bg-secondary text-foreground text-sm font-semibold mb-4">
             Agenda del Evento
           </span>
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-primary-foreground mb-4">
             Programa
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-primary-foreground/60 max-w-2xl mx-auto font-body">
             Un recorrido por los momentos más importantes de nuestra ceremonia
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
-          {programItems.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative"
-            >
-              {/* Timeline line */}
-              {index < programItems.length - 1 && (
-                <div className="absolute left-6 md:left-8 top-16 w-0.5 h-full bg-border" />
-              )}
-
-              <div className={`flex gap-4 md:gap-6 mb-6 ${item.highlight ? '' : ''}`}>
-                {/* Icon */}
-                <div className={`relative z-10 flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-2xl flex items-center justify-center shadow-soft ${
+        <div className="max-w-3xl mx-auto space-y-4">
+          {programItems.map((item, index) => {
+            const IconComponent = item.icon;
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.08 }}
+                className={`relative rounded-2xl p-5 md:p-6 transition-all duration-300 ${
                   item.highlight 
-                    ? 'bg-gradient-gold text-primary-foreground' 
-                    : 'bg-card text-primary'
-                }`}>
-                  <item.icon className="w-5 h-5 md:w-6 md:h-6" />
-                </div>
-
-                {/* Content */}
-                <div className={`flex-1 p-5 md:p-6 rounded-2xl transition-all duration-300 ${
-                  item.highlight 
-                    ? 'bg-card shadow-elevated border border-secondary/20' 
-                    : 'bg-card/50 hover:bg-card hover:shadow-soft'
-                }`}>
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
-                    <h3 className="font-display text-lg md:text-xl font-semibold text-foreground">
-                      {item.title}
-                    </h3>
-                    {item.speaker && (
-                      <span className={`text-sm font-medium px-3 py-1 rounded-full ${
-                        item.highlight 
-                          ? 'bg-secondary/20 text-secondary' 
-                          : 'bg-muted text-muted-foreground'
-                      }`}>
-                        {item.speaker}
-                      </span>
-                    )}
+                    ? 'bg-secondary' 
+                    : 'bg-primary-foreground/5 hover:bg-primary-foreground/10'
+                }`}
+              >
+                <div className="flex items-start gap-4">
+                  {/* Icon */}
+                  <div className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center ${
+                    item.highlight 
+                      ? 'bg-foreground/10' 
+                      : 'bg-secondary/20'
+                  }`}>
+                    <IconComponent className={`w-5 h-5 ${
+                      item.highlight ? 'text-foreground' : 'text-secondary'
+                    }`} />
                   </div>
-                  <p className="text-muted-foreground text-sm md:text-base">
-                    {item.description}
-                  </p>
+
+                  {/* Content */}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-1">
+                      <h3 className={`font-display text-lg font-semibold ${
+                        item.highlight ? 'text-foreground' : 'text-primary-foreground'
+                      }`}>
+                        {item.title}
+                      </h3>
+                      {item.speaker && (
+                        <span className={`text-sm font-medium px-3 py-1 rounded-full w-fit ${
+                          item.highlight 
+                            ? 'bg-foreground/10 text-foreground/80' 
+                            : 'bg-secondary/20 text-secondary'
+                        }`}>
+                          {item.speaker}
+                        </span>
+                      )}
+                    </div>
+                    <p className={`text-sm ${
+                      item.highlight ? 'text-foreground/70' : 'text-primary-foreground/50'
+                    }`}>
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
 
           {/* Final marker */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.8 }}
-            className="flex items-center gap-4 md:gap-6"
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="rounded-2xl p-6 bg-gradient-to-r from-secondary via-secondary to-gold text-center"
           >
-            <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-gradient-hero flex items-center justify-center shadow-soft">
-              <PartyPopper className="w-5 h-5 md:w-6 md:h-6 text-primary-foreground" />
-            </div>
-            <div className="flex-1 p-5 md:p-6 rounded-2xl bg-primary text-primary-foreground">
-              <h3 className="font-display text-lg md:text-xl font-semibold">
-                ¡Fin del Evento! 🎉
-              </h3>
-              <p className="text-primary-foreground/80 text-sm md:text-base">
-                Celebremos juntos este momento especial
-              </p>
-            </div>
+            <PartyPopper className="w-8 h-8 text-foreground mx-auto mb-2" />
+            <h3 className="font-display text-xl font-bold text-foreground">
+              ¡Fin del Evento!
+            </h3>
+            <p className="text-foreground/70 text-sm">
+              Celebremos juntos este momento especial
+            </p>
           </motion.div>
         </div>
       </div>
