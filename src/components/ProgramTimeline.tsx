@@ -128,27 +128,25 @@ const ProgramTimeline = () => {
                 }`}
               >
                 <div className="flex items-start gap-3 sm:gap-4">
-                  {/* Icon + Time */}
-                  <div className="flex-shrink-0 flex flex-col items-center gap-1">
-                    <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center ${
-                      item.highlight 
-                        ? 'bg-foreground/10' 
-                        : 'bg-secondary/20'
-                    }`}>
-                      <IconComponent className={`w-4 h-4 sm:w-5 sm:h-5 ${
-                        item.highlight ? 'text-foreground' : 'text-secondary'
-                      }`} />
-                    </div>
-                    <div className={`text-center ${
+                  {/* Icon */}
+                  <div className={`flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center ${
+                    item.highlight 
+                      ? 'bg-foreground/10' 
+                      : 'bg-secondary/20'
+                  }`}>
+                    <IconComponent className={`w-4 h-4 sm:w-5 sm:h-5 ${
                       item.highlight ? 'text-foreground' : 'text-secondary'
-                    }`}>
-                      <span className="font-display text-[10px] sm:text-xs font-bold">{item.time}</span>
-                      <span className="text-[8px] sm:text-[10px] opacity-60 ml-0.5">am</span>
-                    </div>
+                    }`} />
                   </div>
 
                   {/* Content */}
                   <div className="flex-1 min-w-0">
+                    {/* Time */}
+                    <span className={`font-display text-[10px] sm:text-xs font-semibold ${
+                      item.highlight ? 'text-foreground/70' : 'text-secondary/80'
+                    }`}>
+                      {item.time} a.m.
+                    </span>
                     <div className="flex flex-col gap-1.5 mb-1">
                       <h3 className={`font-display text-base sm:text-lg font-semibold leading-tight ${
                         item.highlight ? 'text-foreground' : 'text-primary-foreground'
