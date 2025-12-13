@@ -121,31 +121,31 @@ const ProgramTimeline = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.06 }}
-                className="relative rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 transition-all duration-300 bg-secondary"
+                className="relative rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 transition-all duration-300 bg-primary-foreground/5 hover:bg-primary-foreground/10"
               >
                 <div className="flex items-start gap-3 sm:gap-4">
                   {/* Icon */}
-                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center bg-foreground/10">
-                    <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 text-foreground" />
+                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center bg-secondary/20">
+                    <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 text-secondary" />
                   </div>
 
                   {/* Content */}
                   <div className="flex-1 min-w-0">
                     {/* Time */}
-                    <span className="font-display text-[10px] sm:text-xs font-semibold text-foreground/70">
+                    <span className="font-display text-[10px] sm:text-xs font-semibold text-secondary">
                       {item.time} a.m.
                     </span>
                     <div className="flex flex-col gap-1.5 mb-1">
-                      <h3 className="font-display text-base sm:text-lg font-semibold leading-tight text-foreground">
+                      <h3 className="font-display text-base sm:text-lg font-semibold leading-tight text-primary-foreground">
                         {item.title}
                       </h3>
                       {item.speaker && (
-                        <span className="text-xs font-medium px-2.5 py-0.5 rounded-full w-fit bg-foreground/10 text-foreground/80">
+                        <span className="text-xs font-medium px-2.5 py-0.5 rounded-full w-fit bg-secondary/20 text-secondary">
                           {item.speaker}
                         </span>
                       )}
                     </div>
-                    <p className="text-xs sm:text-sm leading-relaxed text-foreground/70">
+                    <p className="text-xs sm:text-sm leading-relaxed text-primary-foreground/60">
                       {item.description}
                     </p>
                   </div>
