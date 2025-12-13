@@ -73,14 +73,17 @@ const Hero = () => {
             </div>
             <div className="flex items-center gap-2 px-4 py-2.5 bg-secondary-foreground/10 rounded-full border border-foreground/20">
               <Clock className="w-4 h-4 text-foreground/70" />
-              <span className="text-foreground font-semibold text-sm">9:00 a.m.</span>
+              <span className="text-foreground font-semibold text-sm">8:00 a.m. - 11:00 a.m.</span>
             </div>
           </div>
 
           {/* Location */}
-          <div className="flex items-center gap-3 text-foreground/80 mb-6">
-            <MapPin className="w-5 h-5 flex-shrink-0" />
-            <span className="font-medium text-sm sm:text-base">Clínica Detecta</span>
+          <div className="flex items-start gap-3 text-foreground/80 mb-6">
+            <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
+            <div>
+              <span className="font-medium text-sm sm:text-base block">Hotel Hilton</span>
+              <span className="text-sm text-foreground/60">Salón Gardenias</span>
+            </div>
           </div>
 
           {/* Scroll indicator */}
