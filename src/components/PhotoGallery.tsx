@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Camera, Upload, X, ImageIcon, ZoomIn } from "lucide-react";
+import { Camera, Upload, X, ImageIcon, ZoomIn, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
 
@@ -32,9 +32,23 @@ const PhotoGallery = () => {
       timestamp: new Date(),
     },
   ]);
-  const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [isUploading, setIsUploading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const selectedPhoto = selectedIndex !== null ? photos[selectedIndex] : null;
+
+  const goToPrevious = () => {
+    if (selectedIndex !== null && selectedIndex > 0) {
+      setSelectedIndex(selectedIndex - 1);
+    }
+  };
+
+  const goToNext = () => {
+    if (selectedIndex !== null && selectedIndex < photos.length - 1) {
+      setSelectedIndex(selectedIndex + 1);
+    }
+  };
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
@@ -137,7 +151,7 @@ const PhotoGallery = () => {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 className="group relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden bg-foreground/10 cursor-pointer shadow-lg"
-                onClick={() => setSelectedPhoto(photo)}
+                onClick={() => setSelectedIndex(index)}
               >
                 <img
                   src={photo.url}
@@ -173,21 +187,48 @@ const PhotoGallery = () => {
           )}
         </div>
 
-        {/* Lightbox */}
+        {/* Slider Lightbox */}
         <AnimatePresence>
-          {selectedPhoto && (
+          {selectedPhoto && selectedIndex !== null && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-foreground/95 backdrop-blur-sm"
-              onClick={() => setSelectedPhoto(null)}
+              className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/95 backdrop-blur-sm"
+              onClick={() => setSelectedIndex(null)}
             >
+              {/* Previous button */}
+              {selectedIndex > 0 && (
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    goToPrevious();
+                  }}
+                  className="absolute left-2 sm:left-4 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-secondary/90 backdrop-blur-sm flex items-center justify-center text-foreground hover:bg-secondary transition-colors"
+                >
+                  <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+                </button>
+              )}
+
+              {/* Next button */}
+              {selectedIndex < photos.length - 1 && (
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    goToNext();
+                  }}
+                  className="absolute right-2 sm:right-4 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-secondary/90 backdrop-blur-sm flex items-center justify-center text-foreground hover:bg-secondary transition-colors"
+                >
+                  <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+                </button>
+              )}
+
               <motion.div
+                key={selectedPhoto.id}
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
-                className="relative max-w-4xl max-h-[90vh] rounded-xl sm:rounded-2xl overflow-hidden"
+                className="relative max-w-4xl max-h-[90vh] mx-12 sm:mx-20 rounded-xl sm:rounded-2xl overflow-hidden"
                 onClick={(e) => e.stopPropagation()}
               >
                 <img
@@ -196,7 +237,7 @@ const PhotoGallery = () => {
                   className="max-w-full max-h-[90vh] object-contain"
                 />
                 <button
-                  onClick={() => setSelectedPhoto(null)}
+                  onClick={() => setSelectedIndex(null)}
                   className="absolute top-3 right-3 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-secondary/90 backdrop-blur-sm flex items-center justify-center text-foreground hover:bg-secondary transition-colors"
                 >
                   <X className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -204,6 +245,9 @@ const PhotoGallery = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 bg-gradient-to-t from-foreground/80 to-transparent">
                   <p className="text-primary-foreground font-medium text-sm sm:text-base">
                     Subida por {selectedPhoto.uploadedBy}
+                  </p>
+                  <p className="text-primary-foreground/60 text-xs sm:text-sm">
+                    {selectedIndex + 1} / {photos.length}
                   </p>
                 </div>
               </motion.div>
