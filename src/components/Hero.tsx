@@ -88,7 +88,9 @@ const Hero = () => {
           <div className="flex items-start gap-3 text-foreground/80 mb-6">
             <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
             <div>
-              <span className="font-medium text-sm sm:text-base block">Hotel Hilton</span>
+              <span className="font-medium text-sm sm:text-base block">Hotel Hilton Garden Inn
+
+ </span>
               <span className="text-sm text-foreground/60">Salón Gardenias</span>
             </div>
           </div>
