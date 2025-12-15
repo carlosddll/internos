@@ -25,7 +25,7 @@ const programItems: ProgramItem[] = [
   {
     icon: Users,
     title: "Bienvenida Nuevos Internos 2026",
-    speaker: "Dr. Ladd",
+    speaker: "Dr. Guillermo Ladd",
     description: "Presentación de nombres y foto de la nueva generación de internos",
     highlight: false,
     time: "9:00",
