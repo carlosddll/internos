@@ -26,8 +26,8 @@ const programItems: ProgramItem[] = [
   {
     icon: Coffee,
     title: "Desayuno",
-    speaker: "Dr. Guillermo Ladd",
-    description: "Presentación de la nueva generación de internos",
+    speaker: "",
+    description: "",
     highlight: false,
     time: "8:00",
   },
@@ -113,7 +113,7 @@ const ProgramTimeline = () => {
             Agenda del Evento
           </span>
           <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold text-primary-foreground mb-3">
-            Programa
+            Cronograma
           </h2>
           <p className="text-primary-foreground/60 text-sm sm:text-base max-w-2xl mx-auto font-body">
             Un recorrido por los momentos más importantes de nuestra ceremonia
