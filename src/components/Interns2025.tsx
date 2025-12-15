@@ -23,7 +23,7 @@ const Interns2025 = () => {
             Internado Médico 
           </h2>
           <p className="text-muted-foreground text-sm sm:text-base max-w-2xl mx-auto font-body">
-            Felicitaciones a nuestra generación de internos que culminan su etapa en Clínica Detecta
+            Felicitaciones a nuestra generación de internos que culminan su etapa en Detecta Clínica 
           </p>
         </motion.div>
 
