@@ -74,8 +74,8 @@ const programItems: ProgramItem[] = [
   {
     icon: Rocket,
     title: "Expansión y Sueño Detecta",
-    speaker: "Dr. Mendoza",
-    description: "Visión del futuro y línea de tiempo de la clínica",
+    speaker: "Dr. Gaston Mendoza",
+    description: "Visión Detecta y palabras de despedida",
     highlight: false,
     time: "10:45",
   },
