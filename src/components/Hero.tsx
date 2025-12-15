@@ -55,12 +55,12 @@ const Hero = () => {
         <div className="container max-w-lg mx-auto">
           {/* Tabs */}
           <div className="flex flex-wrap items-center gap-2 mb-5">
-            <div className="flex items-center gap-2 px-3 py-1.5 bg-foreground/10 rounded-full">
-              <div className="w-0.5 h-3 bg-foreground rounded-full" />
-              <span className="text-foreground font-medium text-xs sm:text-sm">Invitación personal</span>
+            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-black">
+              <div className="w-0.5 h-3 rounded-full bg-white" />
+              <span className="font-medium text-xs sm:text-sm text-white">Invitación personal</span>
             </div>
-            <div className="flex items-center gap-2 px-3 py-1.5 bg-secondary-foreground/10 rounded-full">
-              <span className="text-foreground/70 text-xs sm:text-sm">+ Invitado</span>
+            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/55">
+              <span className="text-xs sm:text-sm text-white">+ 1 Invitado</span>
             </div>
           </div>
 
