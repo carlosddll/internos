@@ -23,6 +23,14 @@ interface ProgramItem {
 
 const programItems: ProgramItem[] = [
   {
+    icon: Food,
+    title: "Desayuno",
+    speaker: "Dr. Guillermo Ladd",
+    description: "Presentación de la nueva generación de internos",
+    highlight: false,
+    time: "8:00",
+  },
+  {
     icon: Users,
     title: "Bienvenida Nuevos Internos 2026",
     speaker: "Dr. Guillermo Ladd",
