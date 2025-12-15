@@ -73,7 +73,7 @@ const Hero = () => {
           <div className="flex flex-wrap gap-2 sm:gap-3 mb-6">
             <div className="flex items-center gap-2 px-4 py-2.5 bg-secondary-foreground/10 rounded-full border border-foreground/20">
               <Calendar className="w-4 h-4 text-foreground/70" />
-              <span className="text-foreground font-semibold text-sm">Sábado 16 De Dic.</span>
+              <span className="text-foreground font-semibold text-sm">Sábado 20 De Dic.</span>
             </div>
             
             <div className="flex items-center gap-2 px-4 py-2.5 bg-secondary-foreground/10 rounded-full border border-foreground/20">
