@@ -55,10 +55,10 @@ const Interns2025 = () => {
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 className="relative rounded-xl p-4 bg-card border border-border/50 hover:border-secondary/50 transition-all duration-300 hover:shadow-soft"
               >
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center">
-                    <span className="text-secondary font-display font-bold text-sm">
-                      {index + 1}
+                <div className="flex flex-col items-center gap-3 text-center">
+                  <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-secondary/20 flex items-center justify-center overflow-hidden border-2 border-secondary/30">
+                    <span className="text-secondary font-display font-bold text-xl sm:text-2xl">
+                      {name.split(' ').map(n => n[0]).slice(0, 2).join('')}
                     </span>
                   </div>
                   <p className="font-body text-sm sm:text-base text-foreground font-medium leading-tight">
