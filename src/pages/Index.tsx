@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import ProgramTimeline from "@/components/ProgramTimeline";
+import Interns2025 from "@/components/Interns2025";
 import PhotoGallery from "@/components/PhotoGallery";
 import Footer from "@/components/Footer";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -19,6 +20,7 @@ const Index = () => {
       <div className="relative z-10">
         <Hero />
         <ProgramTimeline />
+        <Interns2025 />
         <PhotoGallery />
         <Footer />
       </div>
