@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
-import { 
-  Users, 
-  Award, 
-  Video, 
-  MessageCircle, 
-  PenTool, 
-  Rocket, 
+import {
+  Users,
+  Award,
+  Video,
+  MessageCircle,
+  PenTool,
+  Rocket,
   PartyPopper,
   Stethoscope,
   CalendarDays,
-  LucideIcon
+  LucideIcon,
 } from "lucide-react";
 
 interface ProgramItem {
@@ -26,45 +26,45 @@ const programItems: ProgramItem[] = [
     icon: Users,
     title: "Bienvenida Nuevos Internos 2026",
     speaker: "Dr. Guillermo Ladd",
-    description: "Presentación de nombres y foto de la nueva generación de internos",
+    description: "Presentación de la nueva generación de internos",
     highlight: false,
     time: "9:00",
   },
   {
     icon: Stethoscope,
-    title: "Recepción de Bata y Fotocheck",
+    title: "Ceremonia de entrega de uniformes",
     speaker: "",
-    description: "Ceremonia de entrega oficial de bata y credenciales",
+    description: "Recepción oficial de bata y credenciales",
     highlight: false,
     time: "9:15",
   },
   {
     icon: PartyPopper,
     title: "Despedida Internos 2025",
-    speaker: "Dr. Sam",
-    description: "Palabras de despedida para los internos salientes",
+    speaker: "Dra. Samantha Mendoza",
+    description: "Palabras de despedida para los internos",
     highlight: false,
     time: "9:30",
   },
   {
     icon: Video,
-    title: "Video Despedida Internos",
-    speaker: "Internos 2025",
-    description: "Video Recap de internos en clínica",
+    title: "Video de nuestros Internos 2025",
+    speaker: "Material Multimedia",
+    description: "Experiencias y aprendizajes",
     highlight: false,
     time: "9:45",
   },
   {
     icon: Award,
     title: "Premiación Especial",
-    speaker: "Dr. Ladd",
-    description: "Reconocimiento a José Jonah Rondón González",
+    speaker: "Dr. Guillermo Ladd y Dra. Samantha Mendoza",
+    description: "Reconocimiento al mejor interno",
     highlight: false,
     time: "10:00",
   },
   {
     icon: MessageCircle,
-    title: "Testimonios",
+    title: "Video Testimonial",
     speaker: "Valeria, Rodrigo, Samir y Laura",
     description: "Experiencias y vivencias compartidas",
     highlight: false,
@@ -90,12 +90,12 @@ const programItems: ProgramItem[] = [
 
 const ProgramTimeline = () => {
   return (
-    <section 
-      id="programa" 
+    <section
+      id="programa"
       className="py-10 sm:py-16 md:py-24 bg-foreground relative"
       style={{
         backgroundImage: `radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px)`,
-        backgroundSize: '20px 20px'
+        backgroundSize: "20px 20px",
       }}
     >
       <div className="container px-5 sm:px-6">
@@ -152,9 +152,7 @@ const ProgramTimeline = () => {
                         </span>
                       )}
                     </div>
-                    <p className="text-xs sm:text-sm leading-relaxed text-primary-foreground/60">
-                      {item.description}
-                    </p>
+                    <p className="text-xs sm:text-sm leading-relaxed text-primary-foreground/60">{item.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -170,12 +168,8 @@ const ProgramTimeline = () => {
             className="rounded-xl sm:rounded-2xl p-5 sm:p-6 bg-gradient-to-r from-secondary via-secondary to-gold text-center"
           >
             <PartyPopper className="w-6 h-6 sm:w-8 sm:h-8 text-foreground mx-auto mb-2" />
-            <h3 className="font-display text-lg sm:text-xl font-bold text-foreground">
-              ¡Fin del Evento!
-            </h3>
-            <p className="text-foreground/70 text-xs sm:text-sm">
-              Celebremos juntos este momento especial
-            </p>
+            <h3 className="font-display text-lg sm:text-xl font-bold text-foreground">¡Fin del Evento!</h3>
+            <p className="text-foreground/70 text-xs sm:text-sm">Celebremos juntos este momento especial</p>
           </motion.div>
         </div>
       </div>
