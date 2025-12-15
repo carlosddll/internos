@@ -25,7 +25,7 @@ interface ProgramItem {
 const programItems: ProgramItem[] = [
   {
     icon: Coffee,
-    title: "Desayuno",
+    title: "Inicio de Desayuno",
     speaker: "",
     description: "",
     highlight: false,
