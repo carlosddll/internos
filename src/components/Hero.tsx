@@ -91,7 +91,7 @@ const Hero = () => {
               <span className="font-medium text-sm sm:text-base block">Hotel Hilton Garden Inn
 
  </span>
-              <span className="text-sm text-foreground/60">Salón Gardenias</span>
+              <span className="text-sm text-foreground/60">Calle Monte Rosa 287 Urb. Chacarilla del estanque - Surco </span>
             </div>
           </div>
 
