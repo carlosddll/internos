@@ -10,6 +10,7 @@ import {
   Stethoscope,
   CalendarDays,
   LucideIcon,
+  Coffee,
 } from "lucide-react";
 
 interface ProgramItem {
@@ -23,7 +24,7 @@ interface ProgramItem {
 
 const programItems: ProgramItem[] = [
   {
-    icon: Food,
+    icon: Coffee,
     title: "Desayuno",
     speaker: "Dr. Guillermo Ladd",
     description: "Presentación de la nueva generación de internos",
