@@ -58,7 +58,7 @@ const programItems: ProgramItem[] = [
     icon: Award,
     title: "Premiación Especial",
     speaker: "Dr. Guillermo Ladd y Dra. Samantha Mendoza",
-    description: "Reconocimiento al mejor interno",
+    description: "Reconocimiento al mejor interno 2025",
     highlight: false,
     time: "10:00",
   },
@@ -70,14 +70,7 @@ const programItems: ProgramItem[] = [
     highlight: false,
     time: "10:15",
   },
-  {
-    icon: PenTool,
-    title: "Premiación y Palabras",
-    speaker: "Jonnah",
-    description: "Entrega del lapicero especial",
-    highlight: false,
-    time: "10:30",
-  },
+
   {
     icon: Rocket,
     title: "Expansión y Sueño Detecta",
