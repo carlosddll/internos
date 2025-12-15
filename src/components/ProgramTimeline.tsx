@@ -65,7 +65,7 @@ const programItems: ProgramItem[] = [
   {
     icon: MessageCircle,
     title: "Video Testimonial",
-    speaker: "Valeria, Rodrigo, Samir y Laura",
+    speaker: "Valeria Rodríguez, Rodrigo Tejada, Samir Panzic y Laura Arizola",
     description: "Experiencias y vivencias compartidas",
     highlight: false,
     time: "10:15",
