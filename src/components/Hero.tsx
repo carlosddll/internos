@@ -56,15 +56,7 @@ término e inicio
     }} className="relative z-10 bg-secondary rounded-t-[2rem] px-5 py-6 sm:px-6 sm:py-8">
         <div className="container max-w-lg mx-auto">
           {/* Tabs */}
-          <div className="flex flex-wrap items-center gap-2 mb-5">
-            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-black">
-              <div className="w-0.5 h-3 rounded-full bg-white" />
-              <span className="font-medium text-xs sm:text-sm text-white">Invitación personal</span>
-            </div>
-            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/55">
-              <span className="text-xs sm:text-sm text-white">+ 1 Invitado</span>
-            </div>
-          </div>
+          
 
           {/* Description */}
           <p className="text-foreground/80 text-base sm:text-lg mb-5 font-body leading-relaxed">
