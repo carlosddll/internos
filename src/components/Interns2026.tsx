@@ -23,7 +23,7 @@ const Interns2026 = () => {
   return (
     <section
       id="internos-2026"
-      className="py-10 sm:py-16 md:py-24 bg-muted/30 relative"
+      className="py-10 sm:py-16 md:py-24 bg-background relative"
     >
       <div className="container px-5 sm:px-6">
         <motion.div
