@@ -50,7 +50,7 @@ const programItems: ProgramItem[] = [
     icon: Video,
     title: "Video Despedida Internos",
     speaker: "Internos 2025",
-    description: "Tirándole flores a Ladd",
+    description: "Video Recap de internos en clínica",
     highlight: false,
     time: "9:45",
   },
