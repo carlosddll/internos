@@ -29,11 +29,7 @@ const PhotoGallery = () => {
             asChild
             className="gap-2 bg-foreground text-primary-foreground hover:bg-foreground/90 px-6 py-6 text-base rounded-full"
           >
-            <a
-              href= GOOGLE_DRIVE_FOLDER_URL
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={GOOGLE_DRIVE_FOLDER_URL} target="_blank" rel="noopener noreferrer">
               <Camera className="w-5 h-5" />
               Ver Galería de Fotos
               <ExternalLink className="w-4 h-4" />
