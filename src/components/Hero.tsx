@@ -4,51 +4,63 @@ import logoDetecta from "@/assets/logo-detecta.png";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
-  return <section className="relative min-h-screen flex flex-col overflow-hidden">
+  return (
+    <section className="relative min-h-screen flex flex-col overflow-hidden">
       {/* Background image */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover"
-        style={{ backgroundImage: `url(${heroBg})`, backgroundPosition: 'center bottom' backgroundSize:'Cover' }}
+        style={{
+          backgroundImage: `url(${heroBg})`,
+          backgroundPosition: "center bottom",
+          backgroundSize: "cover",
+        }}
       />
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/20" />
       {/* Gradient overlay - bottom to top */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-      
+
       {/* Background image area */}
       <div className="relative flex-1 min-h-[45vh] flex items-end">
         {/* Logo centered at top */}
-        <motion.div initial={{
-        opacity: 0,
-        y: -20
-      }} animate={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 0.6
-      }} className="absolute top-6 left-0 right-0 flex justify-center z-20">
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: -20,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.6,
+          }}
+          className="absolute top-6 left-0 right-0 flex justify-center z-20"
+        >
           <img src={logoDetecta} alt="Clínica Detecta" className="h-16 sm:h-20 md:h-24 w-auto brightness-0 invert" />
         </motion.div>
 
         <div className="container relative z-10 px-5 pb-6">
           {/* Main title */}
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          delay: 0.2,
-          duration: 0.6
-        }}>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: 0.2,
+              duration: 0.6,
+            }}
+          >
             <h1 className="sm:text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight font-normal text-2xl font-display">
-              Ceremonia de
-término e inicio     
-
+              Ceremonia de término e inicio
               <br />
               <span className="font-bold text-secondary font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl">
-                del Internado Médico 
+                del Internado Médico
               </span>
             </h1>
           </motion.div>
@@ -56,19 +68,23 @@ término e inicio
       </div>
 
       {/* Bottom card section */}
-      <motion.div initial={{
-      opacity: 0,
-      y: 40
-    }} animate={{
-      opacity: 1,
-      y: 0
-    }} transition={{
-      delay: 0.4,
-      duration: 0.6
-    }} className="relative z-10 bg-secondary rounded-t-[2rem] px-5 py-6 sm:px-6 sm:py-8">
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: 40,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          delay: 0.4,
+          duration: 0.6,
+        }}
+        className="relative z-10 bg-secondary rounded-t-[2rem] px-5 py-6 sm:px-6 sm:py-8"
+      >
         <div className="container max-w-lg mx-auto">
           {/* Tabs */}
-          
 
           {/* Description */}
           <p className="text-foreground/80 text-base sm:text-lg mb-5 font-body leading-relaxed">
@@ -104,26 +120,36 @@ término e inicio
           </div>
 
           {/* Scroll indicator */}
-          <motion.div initial={{
-          opacity: 0
-        }} animate={{
-          opacity: 1
-        }} transition={{
-          delay: 1,
-          duration: 0.6
-        }} className="flex justify-center">
-            <motion.div animate={{
-            y: [0, 6, 0]
-          }} transition={{
-            repeat: Infinity,
-            duration: 1.5,
-            ease: "easeInOut"
-          }} className="w-6 h-10 rounded-full border-2 border-foreground/30 flex items-start justify-center p-1.5">
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              delay: 1,
+              duration: 0.6,
+            }}
+            className="flex justify-center"
+          >
+            <motion.div
+              animate={{
+                y: [0, 6, 0],
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 1.5,
+                ease: "easeInOut",
+              }}
+              className="w-6 h-10 rounded-full border-2 border-foreground/30 flex items-start justify-center p-1.5"
+            >
               <div className="w-1 h-2 rounded-full bg-foreground/50" />
             </motion.div>
           </motion.div>
         </div>
       </motion.div>
-    </section>;
+    </section>
+  );
 };
 export default Hero;
