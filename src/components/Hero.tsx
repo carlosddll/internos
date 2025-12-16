@@ -12,7 +12,7 @@ const Hero = () => {
         style={{
           backgroundImage: `url(${heroBg})`,
           backgroundPosition: "center bottom",
-          backgroundSize: "cover",
+          backgroundSize: "contain",
         }}
       />
       {/* Dark overlay */}
