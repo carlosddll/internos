@@ -11,9 +11,8 @@ const Hero = () => {
         className="relative inset-0 bg-cover"
         style={{
           backgroundImage: `url(${heroBg})`,
-          backgroundPosition: "center bottom",
-          backgroundSize: "contain",
-          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center top",
+          backgroundSize: "cover",
         }}
       />
       {/* Dark overlay */}
