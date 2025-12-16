@@ -33,9 +33,9 @@ const Hero = () => {
           transition={{
             duration: 0.6,
           }}
-          className="absolute top-6 left-0 right-0 flex justify-center z-20"
+          className="absolute top-6 right-5 sm:right-6 z-20"
         >
-          <img src={logoDetecta} alt="Clínica Detecta" className="h-16 sm:h-20 md:h-24 w-auto brightness-0 invert" />
+          <img src={logoDetecta} alt="Clínica Detecta" className="h-12 sm:h-16 md:h-20 w-auto brightness-0 invert" />
         </motion.div>
 
         <div className="container relative z-10 px-5 pb-6">
