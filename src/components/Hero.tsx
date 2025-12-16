@@ -1,8 +1,20 @@
 import { motion } from "framer-motion";
 import { Calendar, MapPin, Clock } from "lucide-react";
 import logoDetecta from "@/assets/logo-detecta.png";
+import heroBg from "@/assets/hero-bg.jpg";
+
 const Hero = () => {
   return <section className="relative min-h-screen flex flex-col overflow-hidden">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroBg})`, backgroundPosition: '70% center' }}
+      />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/50" />
+      {/* Gradient overlay - bottom to top */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+      
       {/* Background image area */}
       <div className="relative flex-1 min-h-[45vh] flex items-end">
         {/* Logo centered at top */}
