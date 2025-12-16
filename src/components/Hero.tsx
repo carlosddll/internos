@@ -15,10 +15,8 @@ const Hero = () => {
           backgroundSize: "cover",
         }}
       />
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/20" />
       {/* Gradient overlay - bottom to top */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
       {/* Background image area */}
       <div className="relative flex-1 min-h-[45vh] flex items-end">
