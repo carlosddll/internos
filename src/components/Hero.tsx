@@ -13,6 +13,7 @@ const Hero = () => {
           backgroundImage: `url(${heroBg})`,
           backgroundPosition: "center bottom",
           backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
         }}
       />
       {/* Dark overlay */}
