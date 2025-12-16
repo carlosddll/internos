@@ -11,9 +11,9 @@ const Hero = () => {
         style={{ backgroundImage: `url(${heroBg})`, backgroundPosition: '70% center' }}
       />
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/30" />
       {/* Gradient overlay - bottom to top */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
       
       {/* Background image area */}
       <div className="relative flex-1 min-h-[45vh] flex items-end">
