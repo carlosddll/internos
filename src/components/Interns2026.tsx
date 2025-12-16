@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { GraduationCap, Users } from "lucide-react";
 
 const interns = [
-  "Minerva Diana Verde Vásquez",
   "Alvaro Yamir Bazán Hernández",
   "Maria Lourdes Gutierrez Falconi",
   "Judith Rosario Arenas Vásquez",
@@ -82,7 +81,7 @@ const Interns2026 = () => {
           >
             <Users className="w-6 h-6 sm:w-8 sm:h-8 text-primary mx-auto mb-2" />
             <p className="text-foreground font-display font-semibold text-lg">
-              15 Internos
+              14 Internos
             </p>
             <p className="text-muted-foreground text-xs sm:text-sm">
               ¡Bienvenidos a la familia Detecta!
