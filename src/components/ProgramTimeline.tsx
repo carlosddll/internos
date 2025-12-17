@@ -53,15 +53,7 @@ const programItems: ProgramItem[] = [
     speaker: "Dra. Samantha Mendoza",
     description: "Palabras de despedida para los internos",
     highlight: false,
-    time: "9:10",
-  },
-  {
-    icon: Video,
-    title: "Video de nuestros Internos 2025",
-    speaker: "Material Multimedia",
-    description: "Experiencias y aprendizajes",
-    highlight: false,
-    time: "9:25",
+    time: "9:00",
   },
   {
     icon: Award,
@@ -70,6 +62,14 @@ const programItems: ProgramItem[] = [
     description: "Reconocimiento al mejor interno 2025",
     highlight: false,
     time: "9:30",
+  },
+  {
+    icon: Video,
+    title: "Video de nuestros Internos 2025",
+    speaker: "Material Multimedia",
+    description: "Experiencias y aprendizajes",
+    highlight: false,
+    time: "9:25",
   },
   {
     icon: MessageCircle,
