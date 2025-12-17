@@ -37,7 +37,7 @@ const programItems: ProgramItem[] = [
     speaker: "Dr. Guillermo Ladd",
     description: "Presentación de la nueva generación de internos",
     highlight: false,
-    time: "8:30",
+    time: "8:20",
   },
   {
     icon: Stethoscope,
@@ -45,7 +45,7 @@ const programItems: ProgramItem[] = [
     speaker: "",
     description: "Recepción oficial de bata y credenciales",
     highlight: false,
-    time: "8:40",
+    time: "8:30",
   },
   {
     icon: PartyPopper,
@@ -53,7 +53,7 @@ const programItems: ProgramItem[] = [
     speaker: "Dra. Samantha Mendoza",
     description: "Palabras de despedida para los internos",
     highlight: false,
-    time: "9:00",
+    time: "8:50",
   },
   {
     icon: Award,
@@ -61,7 +61,7 @@ const programItems: ProgramItem[] = [
     speaker: "Dr. Guillermo Ladd y Dra. Samantha Mendoza",
     description: "Reconocimiento al mejor interno 2025",
     highlight: false,
-    time: "9:30",
+    time: "9:00",
   },
   {
     icon: Video,
@@ -69,11 +69,11 @@ const programItems: ProgramItem[] = [
     speaker: "Material Multimedia",
     description: "Experiencias y aprendizajes",
     highlight: false,
-    time: "9:25",
+    time: "9:20",
   },
   {
     icon: MessageCircle,
-    title: "Video Testimonial",
+    title: "Video Testimonial de Internos egresados",
     speaker: "Valeria Rodríguez, Rodrigo Tejada, Samir Panzic y Laura Arizola",
     description: "Experiencias y vivencias compartidas",
     highlight: false,
