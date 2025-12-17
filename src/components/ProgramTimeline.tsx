@@ -37,15 +37,7 @@ const programItems: ProgramItem[] = [
     speaker: "Dr. Guillermo Ladd",
     description: "Palabras de despedida para los internos",
     highlight: false,
-    time: "8:50",
-  },
-  {
-    icon: Award,
-    title: "Premiación Especial",
-    speaker: "Dr. Guillermo Ladd y Dra. Samantha Mendoza",
-    description: "Reconocimiento al mejor interno 2025",
-    highlight: false,
-    time: "9:00",
+    time: "8:20",
   },
   {
     icon: Video,
@@ -53,15 +45,24 @@ const programItems: ProgramItem[] = [
     speaker: "Material Multimedia",
     description: "Experiencias y aprendizajes",
     highlight: false,
-    time: "9:20",
+    time: "8:30",
   },
+  {
+    icon: Award,
+    title: "Premiación Especial",
+    speaker: "Dr. Guillermo Ladd y Dra. Samantha Mendoza",
+    description: "Reconocimiento al mejor interno 2025",
+    highlight: false,
+    time: "8:40",
+  },
+
   {
     icon: MessageCircle,
     title: "Video Testimonial de Internos egresados",
     speaker: "Valeria Rodríguez, Rodrigo Tejada, Samir Panzic y Laura Arizola",
     description: "Experiencias y vivencias compartidas",
     highlight: false,
-    time: "9:30",
+    time: "8:50",
   },
   {
     icon: Users,
@@ -69,7 +70,7 @@ const programItems: ProgramItem[] = [
     speaker: "Dra. Samantha Mendoza",
     description: "Presentación de la nueva promoción de internos",
     highlight: false,
-    time: "8:20",
+    time: "9:00",
   },
   {
     icon: Stethoscope,
@@ -77,7 +78,7 @@ const programItems: ProgramItem[] = [
     speaker: "",
     description: "Recepción oficial de bata y credenciales",
     highlight: false,
-    time: "8:30",
+    time: "9:15",
   },
 
   {
@@ -86,7 +87,7 @@ const programItems: ProgramItem[] = [
     speaker: "Dr. Gaston Mendoza",
     description: "Visión Detecta y palabras de despedida",
     highlight: false,
-    time: "10:00",
+    time: "9:40",
   },
 ];
 
