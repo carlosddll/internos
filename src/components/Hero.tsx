@@ -16,7 +16,7 @@ const Hero = () => {
         }}
       />
       {/* Gradient overlay - bottom to top */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/30" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/30 to-black/15" />
 
       {/* Background image area */}
       <div className="relative flex-1 min-h-[45vh] flex items-end">
