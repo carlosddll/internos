@@ -48,14 +48,6 @@ const programItems: ProgramItem[] = [
     time: "8:30",
   },
   {
-    icon: PartyPopper,
-    title: "Despedida Internos 2025",
-    speaker: "Dra. Samantha Mendoza",
-    description: "Palabras de despedida para los internos",
-    highlight: false,
-    time: "8:50",
-  },
-  {
     icon: Award,
     title: "Premiación Especial",
     speaker: "Dr. Guillermo Ladd y Dra. Samantha Mendoza",
@@ -72,12 +64,20 @@ const programItems: ProgramItem[] = [
     time: "9:20",
   },
   {
+    icon: PartyPopper,
+    title: "Despedida Internos 2025",
+    speaker: "Dra. Samantha Mendoza",
+    description: "Palabras de despedida para los internos",
+    highlight: false,
+    time: "8:50",
+  },
+  {
     icon: MessageCircle,
     title: "Video Testimonial de Internos egresados",
     speaker: "Valeria Rodríguez, Rodrigo Tejada, Samir Panzic y Laura Arizola",
     description: "Experiencias y vivencias compartidas",
     highlight: false,
-    time: "9:45",
+    time: "9:30",
   },
 
   {
